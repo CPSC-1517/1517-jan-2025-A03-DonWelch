@@ -138,6 +138,13 @@ namespace WestWindApp.Components.Pages.SamplePages
                         //      example: "You must select a category"
                         validationMessageStore.Add(editContext.Field(nameof(CurrentProduct.CategoryID)),
                                                    "You must select a category");
+
+                        //alternative technique for setting message
+                        //using lamda method execution
+                        // () => execute with the following
+                        // parameter 1: the nameof of the entity field
+                        // parameter 2: the message
+                        //validationMessageStore.Add(() => CurrentProduct.CategoryID, "Losses must be 0 or greater.");
                     }
                     if (CurrentProduct.SupplierID == 0)
                     {
